@@ -1,3 +1,2 @@
-<FilesMatch "^apple-app-site-association$">
-    ForceType application/json
-</FilesMatch>
+RewriteRule ^apple-app-site-association$ - [env=apple:1]
+Header set Content-type application/json env=apple
